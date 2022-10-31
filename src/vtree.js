@@ -51,9 +51,9 @@ class VTree {
       .on('zoom', () => {
         const e = d3.event;
 
-        if (this.d3.g) {
-          this.d3.g.attr('transform', `translate(${e.translate})scale(${e.scale})`);
-        }
+//         if (this.d3.g) {
+//           this.d3.g.attr('transform', `translate(${e.translate})scale(${e.scale})`);
+//         }
       });
 
     this.d3.svg = this.d3.container.append('svg')
@@ -69,7 +69,6 @@ class VTree {
     }
 
     this._width = width;
-
     this.d3.container.select('svg')
       .attr('width', width);
 
@@ -209,7 +208,7 @@ class VTree {
       this.root.y = MARGIN;
     }
 
-    this.root.g.attr('transform', `translate(${this.root.x},${this.root.y})`);
+//     this.root.g.attr('transform', `translate(${this.root.x},${this.root.y})`);
 
   }
 
